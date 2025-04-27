@@ -44,15 +44,6 @@ export default function Projects() {
       githubLink: "https://github.com/yousufatef/Next.js-To-Do",
     },
     {
-      title: "Elagamy-Store Platform",
-      description:
-        "A full-stack e-commerce platform enabling product search and PayPal payments,with secure authentication and responsive design for a smooth user experience.",
-      image: "/e-commerce.png",
-      tags: ["React.js", "TypeScript", "Stripe", "Tailwind CSS", "redux-toolkit", "Node.js", "Express", "Mongodb", "JWT"],
-      demoLink: "https://github.com/yousufatef/eStore",
-      githubLink: "https://github.com/yousufatef/eStore",
-    },
-    {
       title: "OureCommerce Platform",
       description:
         "A user-friendly e-commerce Platform for effortless product browsing, wishlist management, secure checkout, built for high performance, clean code and accessibility. Technologies: React.js, TypeScript, Bootstrap, Redux Toolkit",
@@ -60,6 +51,15 @@ export default function Projects() {
       tags: ["React.js", "TypeScript", "Stripe", "Bootstrap", "react-hook-form", "redux-persist", "redux-toolkit"],
       demoLink: "https://github.com/yousufatef/oureCommerece",
       githubLink: "https://github.com/yousufatef/oureCommerece",
+    },
+    {
+      title: "Elagamy-Store Platform",
+      description:
+        "A full-stack e-commerce platform enabling product search and PayPal payments,with secure authentication and responsive design for a smooth user experience.",
+      image: "/e-commerce.png",
+      tags: ["React.js", "TypeScript", "Stripe", "Tailwind CSS", "redux-toolkit", "Node.js", "Express", "Mongodb", "JWT"],
+      demoLink: "https://github.com/yousufatef/eStore",
+      githubLink: "https://github.com/yousufatef/eStore",
     },
     {
       title: "For Ingredients Platform",
