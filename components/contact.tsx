@@ -100,7 +100,7 @@ export default function Contact() {
                     <p className="text-muted-foreground mt-4">Lets work together</p>
                 </motion.div>
 
-                <div className="grid lg:grid-cols-3 gap-8">
+                <div className="grid lg:grid-cols-3 gap-8 justify-center">
                     <motion.div style={{ y: y1 }} className="lg:col-span-2 relative">
                         <div className="absolute -top-10 -left-10 w-20 h-20 border-t-2 border-l-2 border-primary opacity-20" />
                         <div className="absolute -bottom-10 -right-10 w-20 h-20 border-b-2 border-r-2 border-primary opacity-20" />
