@@ -146,7 +146,7 @@ export default function Projects() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8"
+          className="grid md:grid-cols-2 gap-8 justify-center"
         >
           {projects.map((project, index) => (
             <motion.div
