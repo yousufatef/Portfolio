@@ -101,7 +101,7 @@ export default function Contact() {
                 </motion.div>
 
                 <div className="grid lg:grid-cols-3 gap-8 justify-center">
-                    <motion.div style={{ y: y1 }} className="lg:col-span-2 relative px-2">
+                    <motion.div style={{ y: y1 }} className="lg:col-span-2 relative px-6">
                         <div className="absolute -top-10 -left-10 w-20 h-20 border-t-2 border-l-2 border-primary opacity-20" />
                         <div className="absolute -bottom-10 -right-10 w-20 h-20 border-b-2 border-r-2 border-primary opacity-20" />
 
@@ -233,7 +233,7 @@ export default function Contact() {
                         </Card>
                     </motion.div>
 
-                    <motion.div style={{ y: y2 }} className="relative px-2">
+                    <motion.div style={{ y: y2 }} className="relative px-6">
                         <div className="space-y-6">
                             {contactInfo.map((info, index) => (
                                 <motion.div
