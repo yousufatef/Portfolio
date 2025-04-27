@@ -49,8 +49,8 @@ export default function Projects() {
         "A full-stack e-commerce platform enabling product search and PayPal payments,with secure authentication and responsive design for a smooth user experience.",
       image: "/e-commerce.png",
       tags: ["React.js", "TypeScript", "Stripe", "Tailwind CSS", "redux-toolkit", "Node.js", "Express", "Mongodb", "JWT"],
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "https://github.com/yousufatef/eStore",
+      githubLink: "https://github.com/yousufatef/eStore",
     },
     {
       title: "OureCommerce Platform",
