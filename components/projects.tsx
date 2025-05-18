@@ -35,6 +35,15 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "EventHub Platform",
+      description:
+        "A modern event platform with secure login, admin dashboard, and one-click event booking limited to one per user.",
+      image: "/eventhub.png",
+      tags: ["Next.js", "TypeScript", "Clerk", "Tailwind CSS"],
+      demoLink: "https://event-booking-ecru.vercel.app/",
+      githubLink: "https://github.com/yousufatef/EventBooking",
+    },
+    {
       title: "Todo Management App",
       description:
         "This app helps users manage their daily tasks easily. It supports login with email and social accounts, task management, and has both dark and light modes.",
