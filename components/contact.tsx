@@ -4,41 +4,40 @@ import type React from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+
 import { Mail, MapPin, Phone } from "lucide-react"
 import { useState, useRef } from "react"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import * as z from "zod"
+// import { zodResolver } from "@hookform/resolvers/zod"
+// import { useForm } from "react-hook-form"
+// import * as z from "zod"
 
-const contactFormSchema = z.object({
-    name: z
-        .string()
-        .trim()
-        .min(1, { message: "Name is required." })
-        .min(2, { message: "Name must be at least 2 characters." }),
+// const contactFormSchema = z.object({
+//     name: z
+//         .string()
+//         .trim()
+//         .min(1, { message: "Name is required." })
+//         .min(2, { message: "Name must be at least 2 characters." }),
 
-    email: z
-        .string()
-        .trim()
-        .min(1, { message: "Email is required." })
-        .email({ message: "Please enter a valid email address." }),
+//     email: z
+//         .string()
+//         .trim()
+//         .min(1, { message: "Email is required." })
+//         .email({ message: "Please enter a valid email address." }),
 
-    subject: z
-        .string()
-        .trim()
-        .min(1, { message: "Subject is required." })
-        .min(5, { message: "Subject must be at least 5 characters." }),
+//     subject: z
+//         .string()
+//         .trim()
+//         .min(1, { message: "Subject is required." })
+//         .min(5, { message: "Subject must be at least 5 characters." }),
 
-    message: z
-        .string()
-        .trim()
-        .min(1, { message: "Message is required." })
-        .min(10, { message: "Message must be at least 10 characters." }),
-});
+//     message: z
+//         .string()
+//         .trim()
+//         .min(1, { message: "Message is required." })
+//         .min(10, { message: "Message must be at least 10 characters." }),
+// });
 
-type ContactFormValues = z.infer<typeof contactFormSchema>
+// type ContactFormValues = z.infer<typeof contactFormSchema>
 
 export default function Contact() {
     const sectionRef = useRef<HTMLDivElement>(null)
@@ -50,47 +49,47 @@ export default function Contact() {
     const y1 = useTransform(scrollYProgress, [0, 1], [100, -100])
     const y2 = useTransform(scrollYProgress, [0, 1], [50, -50])
 
-    const [isSubmitting, setIsSubmitting] = useState(false)
-    const [isSuccess, setIsSuccess] = useState(false)
+    // const [isSubmitting, setIsSubmitting] = useState(false)
+    const [isSuccess,] = useState(false)
 
-    const form = useForm<ContactFormValues>({
-        resolver: zodResolver(contactFormSchema),
-        defaultValues: {
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-        },
-    })
+    // const form = useForm<ContactFormValues>({
+    //     resolver: zodResolver(contactFormSchema),
+    //     defaultValues: {
+    //         name: "",
+    //         email: "",
+    //         subject: "",
+    //         message: "",
+    //     },
+    // })
 
-    const onSubmit = async (data: ContactFormValues) => {
-        setIsSubmitting(true)
+    // const onSubmit = async (data: ContactFormValues) => {
+    //     setIsSubmitting(true)
 
-        try {
-            const response = await fetch("/api/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            })
+    //     try {
+    //         const response = await fetch("/api/contact", {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //             },
+    //             body: JSON.stringify(data),
+    //         })
 
-            if (!response.ok) {
-                throw new Error("Failed to send message")
-            }
+    //         if (!response.ok) {
+    //             throw new Error("Failed to send message")
+    //         }
 
-            form.reset()
-            setIsSuccess(true)
+    //         form.reset()
+    //         setIsSuccess(true)
 
-            // Reset success message after 3 seconds
-            setTimeout(() => setIsSuccess(false), 3000)
-        } catch (error) {
-            console.error("Error submitting form:", error)
-            alert("Failed to send the message. Please try again later.")
-        } finally {
-            setIsSubmitting(false)
-        }
-    }
+    //         // Reset success message after 3 seconds
+    //         setTimeout(() => setIsSuccess(false), 3000)
+    //     } catch (error) {
+    //         console.error("Error submitting form:", error)
+    //         alert("Failed to send the message. Please try again later.")
+    //     } finally {
+    //         setIsSubmitting(false)
+    //     }
+    // }
 
     const contactInfo = [
         {

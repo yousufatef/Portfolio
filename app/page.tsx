@@ -9,8 +9,6 @@ import BookCorners from "@/components/book-corners";
 import Projects from "@/components/projects";
 import BackgroundAnimation from "@/components/bacground-animation";
 import MouseFollower from "@/components/mouse-followe";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
