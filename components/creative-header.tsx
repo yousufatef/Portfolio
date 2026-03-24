@@ -54,7 +54,7 @@ export default function CreativeHeader() {
           <div className="book-nav-border relative">
             <div className="absolute top-0 left-0 w-full h-full bg-background/80 backdrop-blur-md -z-10"></div>
 
-            <div className="flex h-16 items-center justify-between px-6">
+            <div className="flex h-16 items-center justify-between px-4 sm:px-6">
               <motion.div
                 className="font-bold text-xl"
                 initial={{ opacity: 0, x: -20 }}
@@ -67,7 +67,7 @@ export default function CreativeHeader() {
                     <path d="M18 9L27 18L18 27L9 18L18 9Z" fill="currentColor" />
                     <circle cx="18" cy="18" r="3" className="fill-background" />
                   </svg>
-                  <span className="text-primary">Youssef Atef</span>
+                  <span className="text-primary truncate max-w-[150px] sm:max-w-none">Youssef Atef</span>
                 </Link>
               </motion.div>
 
@@ -92,7 +92,7 @@ export default function CreativeHeader() {
                 ))}
               </nav>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 sm:gap-4">
                 <ModeToggle />
                 <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMobileMenuOpen(true)}>
                   <Menu className="h-6 w-6" />
@@ -102,7 +102,7 @@ export default function CreativeHeader() {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-16 h-6 overflow-hidden">
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-16 h-6 overflow-hidden hidden sm:block">
               <div className="w-16 h-16 bg-primary rounded-full"></div>
             </div>
           </div>
@@ -119,7 +119,7 @@ export default function CreativeHeader() {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
           >
             <div className="book-page-border h-full flex flex-col">
-              <div className="flex h-16 items-center justify-between px-6 border-b">
+              <div className="flex h-16 items-center justify-between px-4 sm:px-6 border-b">
                 <div className="font-bold text-xl">
                   <span className="text-primary">Youssef Atef</span>
                 </div>
@@ -129,7 +129,7 @@ export default function CreativeHeader() {
                 </Button>
               </div>
 
-              <nav className="flex flex-col gap-2 p-6 flex-grow">
+              <nav className="flex flex-col gap-2 p-4 sm:p-6 flex-grow overflow-y-auto">
                 {navItems.map((item, i) => (
                   <motion.div
                     key={item.name}

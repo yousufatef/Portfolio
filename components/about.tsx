@@ -72,14 +72,14 @@ export default function About() {
               <Card className="overflow-hidden group hover:border-primary/50 transition-colors">
                 <CardContent className="p-6 relative">
                   <div className="absolute inset-0 bg-primary/5 scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right" />
-                  <p className="text-4xl font-bold text-primary mb-1 relative">1+</p>
+                  <p className="text-4xl font-bold text-primary mb-1 relative">2+</p>
                   <p className="text-sm text-muted-foreground relative">Years Experience</p>
                 </CardContent>
               </Card>
               <Card className="overflow-hidden group hover:border-primary/50 transition-colors">
                 <CardContent className="p-6 relative">
                   <div className="absolute inset-0 bg-primary/5 scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-left" />
-                  <p className="text-4xl font-bold text-primary mb-1 relative">10+</p>
+                  <p className="text-4xl font-bold text-primary mb-1 relative">20+</p>
                   <p className="text-sm text-muted-foreground relative">Projects Completed</p>
                 </CardContent>
               </Card>
