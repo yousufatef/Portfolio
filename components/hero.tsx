@@ -64,7 +64,7 @@ export default function Hero() {
         className="text-xl md:text-2xl text-muted-foreground mb-6 h-12"
       >
         <TypeAnimation
-          sequence={["Front-End Developer", 2000, "Freelancer", 2000, "Creative Coder", 2000]}
+          sequence={["Software Engineer", 2000, "Freelancer", 2000, "Creative Coder", 2000]}
           wrapper="span"
           speed={50}
           repeat={Number.POSITIVE_INFINITY}

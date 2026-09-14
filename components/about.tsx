@@ -56,12 +56,12 @@ export default function About() {
             className="relative text-center"
           >
             <motion.h3 variants={item} className="text-3xl font-bold mb-6 relative">
-              {"I'm Youssef Atef, a Front-End Developer"}
+              {"I'm Youssef Atef, a Software Engineer"}
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-primary" />
             </motion.h3>
 
             <motion.p variants={item} className="text-muted-foreground mb-6 leading-relaxed">
-              {"Aspiring Front-End Developer eager to leverage technical skills, analytical abilities, and problem-solving competencies to contribute to the growth and success of the organization."}
+              {"Aspiring Software Engineer eager to leverage technical skills, analytical abilities, and problem-solving competencies to contribute to the growth and success of the organization."}
             </motion.p>
 
             <motion.p variants={item} className="text-muted-foreground mb-8 leading-relaxed">

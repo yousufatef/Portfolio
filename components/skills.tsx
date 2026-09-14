@@ -59,11 +59,6 @@ export default function Skills() {
     const skills = [
         // Row 1
         {
-            name: "HTML",
-            icon: <Code className="w-8 h-8" />,
-            color: "#E34F26",
-        },
-        {
             name: "CSS",
             icon: <FileType className="w-8 h-8" />,
             color: "#1572B6",
@@ -99,6 +94,16 @@ export default function Skills() {
             color: "#764ABC",
         },
         {
+            name: "Zustand",
+            icon: <Box className="w-8 h-8" />,
+            color: "#443E38",
+        },
+        {
+            name: "React TanStack",
+            icon: <Gauge className="w-8 h-8" />,
+            color: "#FF4154",
+        },
+        {
             name: "Tailwind CSS",
             icon: <Wind className="w-8 h-8" />,
             color: "#06B6D4",
@@ -115,11 +120,7 @@ export default function Skills() {
         },
 
         // Row 2
-        {
-            name: "Bootstrap",
-            icon: <Box className="w-8 h-8" />,
-            color: "#7952B3",
-        },
+       
         {
             name: "Git",
             icon: <GitBranch className="w-8 h-8" />,
@@ -141,29 +142,19 @@ export default function Skills() {
             color: "primary",
         },
         {
-            name: "MongoDB",
-            icon: <Database className="w-8 h-8" />,
-            color: "#47A248",
+            name: "NestJS",
+            icon: <Server className="w-8 h-8" />,
+            color: "#E0234E",
         },
         {
-            name: "Firebase",
+            name: "SQL & No-SQL Databases",
             icon: <Database className="w-8 h-8" />,
-            color: "#FFCA28",
+            color: "#47A248",
         },
         {
             name: "Figma",
             icon: <FigmaIcon className="w-8 h-8" />,
             color: "#F24E1E",
-        },
-        {
-            name: "Framer Motion",
-            icon: <FramerLogo className="w-8 h-8" />,
-            color: "#0055FF",
-        },
-        {
-            name: "Performance",
-            icon: <Gauge className="w-8 h-8" />,
-            color: "#4285F4",
         },
     ]
 
