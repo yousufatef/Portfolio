@@ -9,10 +9,68 @@ import BookCorners from "@/components/book-corners";
 import Projects from "@/components/projects";
 import BackgroundAnimation from "@/components/bacground-animation";
 import MouseFollower from "@/components/mouse-followe";
+import JsonLd from "@/components/json-ld";
+import { projects } from "@/lib/projects";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
 export default function Home() {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": absoluteUrl("/#person"),
+    name: siteConfig.name,
+    url: siteConfig.url,
+    email: siteConfig.email,
+    telephone: siteConfig.phone,
+    jobTitle: [
+      "Software Engineer",
+      "Frontend Developer",
+      "Full-Stack Developer",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Giza",
+      addressCountry: "EG",
+    },
+    sameAs: [siteConfig.github, siteConfig.linkedin],
+    knowsAbout: siteConfig.skills,
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "Software Engineer",
+      occupationalCategory: "15-1252.00",
+      skills: siteConfig.skills.join(", "),
+    },
+    mainEntityOfPage: absoluteUrl("/"),
+    worksFor: {
+      "@type": "Organization",
+      name: "Freelance / Open to opportunities",
+    },
+    workExample: projects.slice(0, 8).map((project) => ({
+      "@type": "CreativeWork",
+      name: project.title,
+      url: absoluteUrl(`/projects/${project.slug}`),
+      description: project.seoDescription,
+      programmingLanguage: project.tags,
+      image: absoluteUrl(project.image),
+    })),
+  }
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": absoluteUrl("/#website"),
+    name: "Youssef Atef Portfolio",
+    url: siteConfig.url,
+    description: siteConfig.description,
+    inLanguage: "en",
+    publisher: {
+      "@id": absoluteUrl("/#person"),
+    },
+  }
+
   return (
     <div className="relative min-h-screen bg-background overflow-hidden">
+      <JsonLd data={[personSchema, websiteSchema]} />
       <BackgroundAnimation />
       <MouseFollower />
       <BookCorners />

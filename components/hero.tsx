@@ -64,7 +64,7 @@ export default function Hero() {
         className="text-xl md:text-2xl text-muted-foreground mb-6 h-12"
       >
         <TypeAnimation
-          sequence={["Software Engineer", 2000, "Freelancer", 2000, "Creative Coder", 2000]}
+          sequence={["Software Engineer", 2000, "Frontend Developer", 2000, "Full-Stack Developer", 2000]}
           wrapper="span"
           speed={50}
           repeat={Number.POSITIVE_INFINITY}
@@ -77,7 +77,8 @@ export default function Hero() {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="max-w-[600px] text-muted-foreground mb-8"
       >
-        I create beautiful, functional, and responsive web applications with modern technologies.
+        Software Engineer in Egypt specializing in React.js, Next.js, TypeScript, and scalable web
+        applications as a mid-level Frontend Developer and junior Full-Stack Developer.
       </motion.p>
 
       <motion.div
@@ -88,7 +89,7 @@ export default function Hero() {
       >
         <Button asChild size="lg" className="group relative overflow-hidden">
           <Link href="#contact">
-            <span className="relative z-10">Contact Me</span>
+            <span className="relative z-10">Contact Youssef Atef</span>
             <ArrowRight className="relative z-10 ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             <span className="absolute inset-0 bg-primary/80 translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300" />
           </Link>
@@ -110,15 +111,15 @@ export default function Hero() {
       >
         <Link href="https://github.com/yousufatef" target="_blank" rel="noopener noreferrer" className="bg-primary p-2 rounded-full">
           <Github className="h-6 w-6 text-primary-foreground" />
-          <span className="sr-only">GitHub</span>
+          <span className="sr-only">Youssef Atef GitHub profile</span>
         </Link>
         <Link href="https://www.linkedin.com/in/youssef-atef-elagamy" target="_blank" rel="noopener noreferrer" className="bg-[#0077B5] p-2 rounded-full">
           <Linkedin className="h-6 w-6 text-white" />
-          <span className="sr-only">LinkedIn</span>
+          <span className="sr-only">Youssef Atef LinkedIn profile</span>
         </Link>
         <Link href="mailto:youssef.atef.business@gmail.com" className="bg-[#C71610] p-2 rounded-full">
           <Mail className="h-6 w-6 text-white" />
-          <span className="sr-only">Email</span>
+          <span className="sr-only">Email Youssef Atef</span>
         </Link>
       </motion.div>
 

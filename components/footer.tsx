@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Heart } from "lucide-react"
+import { Github, Heart, Linkedin, Mail } from "lucide-react"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -45,6 +46,27 @@ export default function Footer() {
             <span>Built with love</span> <Heart />
           </div>
         </motion.div>
+
+        <nav aria-label="Youssef Atef professional links" className="flex flex-wrap justify-center gap-4 text-sm">
+          <Link href="/#about" className="text-muted-foreground hover:text-primary transition-colors">
+            About Youssef Atef
+          </Link>
+          <Link href="/#projects" className="text-muted-foreground hover:text-primary transition-colors">
+            Portfolio projects
+          </Link>
+          <Link href="https://github.com/yousufatef" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+            <Github className="h-4 w-4" />
+            GitHub
+          </Link>
+          <Link href="https://www.linkedin.com/in/youssef-atef-elagamy" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+            <Linkedin className="h-4 w-4" />
+            LinkedIn
+          </Link>
+          <Link href="mailto:youssef.atef.business@gmail.com" className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+            <Mail className="h-4 w-4" />
+            Email
+          </Link>
+        </nav>
       </div>
     </footer>
   )

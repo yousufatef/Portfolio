@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { ModeToggle } from "@/components/mode-toggle"
+import { useEffect, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { ModeToggle } from "@/components/mode-toggle"
+import { Button } from "@/components/ui/button"
 
 export default function CreativeHeader() {
   const [scrolled, setScrolled] = useState(false)
@@ -16,7 +16,6 @@ export default function CreativeHeader() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
 
-      // Determine active section
       const sections = ["hero", "about", "skills", "projects", "contact"]
       for (const section of sections.reverse()) {
         const element = document.getElementById(section)
@@ -35,11 +34,11 @@ export default function CreativeHeader() {
   }, [])
 
   const navItems = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#hero", section: "hero" },
+    { name: "About", href: "/#about", section: "about" },
+    { name: "Skills", href: "/#skills", section: "skills" },
+    { name: "Projects", href: "/#projects", section: "projects" },
+    { name: "Contact", href: "/#contact", section: "contact" },
   ]
 
   return (
@@ -52,7 +51,7 @@ export default function CreativeHeader() {
       >
         <div className="container">
           <div className="book-nav-border relative">
-            <div className="absolute top-0 left-0 w-full h-full bg-background/80 backdrop-blur-md -z-10"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-background/80 backdrop-blur-md -z-10" />
 
             <div className="flex h-16 items-center justify-between px-4 sm:px-6">
               <motion.div
@@ -61,8 +60,8 @@ export default function CreativeHeader() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <Link href="#hero" className="flex items-center gap-2">
-                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <Link href="/#hero" className="flex items-center gap-2" aria-label="Youssef Atef portfolio home">
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M18 3L33 18L18 33L3 18L18 3Z" className="fill-primary" />
                     <path d="M18 9L27 18L18 27L9 18L18 9Z" fill="currentColor" />
                     <circle cx="18" cy="18" r="3" className="fill-background" />
@@ -71,7 +70,7 @@ export default function CreativeHeader() {
                 </Link>
               </motion.div>
 
-              <nav className="hidden md:flex items-center gap-1">
+              <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
                 {navItems.map((item, i) => (
                   <motion.div
                     key={item.name}
@@ -81,10 +80,11 @@ export default function CreativeHeader() {
                   >
                     <Link
                       href={item.href}
-                      className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${activeSection === item.href.substring(1)
-                        ? "text-white bg-primary dark:text-black"
-                        : "hover:text-primary hover:bg-primary/10"
-                        }`}
+                      className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
+                        activeSection === item.section
+                          ? "text-white bg-primary dark:text-black"
+                          : "hover:text-primary hover:bg-primary/10"
+                      }`}
                     >
                       {item.name}
                     </Link>
@@ -101,9 +101,8 @@ export default function CreativeHeader() {
               </div>
             </div>
 
-            {/* Decorative elements */}
-            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-16 h-6 overflow-hidden hidden sm:block">
-              <div className="w-16 h-16 bg-primary rounded-full"></div>
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-16 h-6 overflow-hidden hidden sm:block" aria-hidden="true">
+              <div className="w-16 h-16 bg-primary rounded-full" />
             </div>
           </div>
         </div>
@@ -129,7 +128,7 @@ export default function CreativeHeader() {
                 </Button>
               </div>
 
-              <nav className="flex flex-col gap-2 p-4 sm:p-6 flex-grow overflow-y-auto">
+              <nav className="flex flex-col gap-2 p-4 sm:p-6 flex-grow overflow-y-auto" aria-label="Mobile navigation">
                 {navItems.map((item, i) => (
                   <motion.div
                     key={item.name}
@@ -139,10 +138,9 @@ export default function CreativeHeader() {
                   >
                     <Link
                       href={item.href}
-                      className={`flex items-center py-3 px-4 text-lg font-medium rounded-md transition-all duration-300 ${activeSection === item.href.substring(1)
-                        ? "text-white bg-primary"
-                        : "hover:text-primary hover:bg-primary/10"
-                        }`}
+                      className={`flex items-center py-3 px-4 text-lg font-medium rounded-md transition-all duration-300 ${
+                        activeSection === item.section ? "text-white bg-primary" : "hover:text-primary hover:bg-primary/10"
+                      }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -152,7 +150,7 @@ export default function CreativeHeader() {
               </nav>
 
               <div className="p-6 border-t text-center text-muted-foreground">
-                <p>© {new Date().getFullYear()} Youssef Atef</p>
+                <p>&copy; {new Date().getFullYear()} Youssef Atef</p>
               </div>
             </div>
           </motion.div>
